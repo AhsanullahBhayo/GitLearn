@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import "./add.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
-const Add = () => {
-  const users = {
-    fname: "",
-    lname: "",
-    email: "",
-    password: "",
-  };
-  const [user, setUser] = useState(users);
+
+const Form = () => {
+  const [user, setUser] = useState();
   const navigate = useNavigate();
   const inputHandler = (e) => {
     const { name, value } = e.target;
@@ -85,4 +79,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default Form;
