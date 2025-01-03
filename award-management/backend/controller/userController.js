@@ -36,7 +36,7 @@ export const updateAward = async (req, res) => {
     const updatedAward = await User.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.status(200).json({ msg: "User Updated Successfully" });
+    res.status(200).json({ msg: "Award Updated Successfully" });
   } catch (error) {
     res.status(500).json({ error: error });
   }
@@ -51,7 +51,7 @@ export const deleteAward = async (req, res) => {
     }
 
     await User.findByIdAndDelete(id);
-    res.status(200).json({ msg: "user deleted successfully" });
+    res.status(200).json({ msg: "award deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: error });
   }
